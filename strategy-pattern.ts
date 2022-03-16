@@ -17,7 +17,7 @@ class InteractiveElement {
 	init() {
 		this.display.element = this.element;
 		this.display.render();
-		this.hoverAction.parent = this.clickAction.parent = this.callableAction.parent = = this.display.parent = this;
+		this.hoverAction.parent = this.clickAction.parent = this.callableAction.parent = this.display.parent = this;
 		this.element.addEventListener("hover", this.hoverAction.act);
 		this.element.addEventListener("click", this.clickAction.act);
 		this.addClickListener();
