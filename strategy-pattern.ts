@@ -23,7 +23,7 @@ class InteractiveElement {
 		this.addClickListener();
 	}
 	
-	act(arg: any) {
+	act(arg?: any) {
 		this.callableAction.act(arg);
 	}
 	
