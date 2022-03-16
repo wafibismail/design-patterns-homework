@@ -44,16 +44,18 @@ class MessageFactory {
         this.box = MessageBox;
         this.queue = MessageQueue;
     }
+    
     //render() is private, not to be called directly outside of class
     render(message) {
         this.box.appendChild(message);
+        this.queue.enqueue(message);
         if (this.queue.getLength() > MAX_MESSAGES) {
             let oldest = this.queue.dequeue();
             this.box.removeChild(oldest);
         }
     }
+    
     create;
-
 }
 
 class Queue {
