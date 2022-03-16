@@ -14,6 +14,7 @@ class NormalMessageFactory extends MessageFactory {
         return message;
     }
 }
+
 class ImportantMessageFactory extends MessageFactory {
     create(messageText, classesArray) {
         let message = document.createElement("p");
@@ -25,6 +26,7 @@ class ImportantMessageFactory extends MessageFactory {
         return message;
     }
 }
+
 class DeveloperOnlyMessageFactory extends MessageFactory {
     create(messageText, classesArray) {
         if (userIsDev) {
