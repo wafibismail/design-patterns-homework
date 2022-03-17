@@ -12,7 +12,7 @@ class WeaponItem implements Item {
     label: string;
     
     constructor() {
-        let type = WeaponItemTypes[Math.round(WeaponItemTypes.length*Math.random())];
+        let type = WeaponItemTypes[Math.floor(WeaponItemTypes.length*Math.random())];
 
         this.uses = Math.round(Math.max(type.maxUses/5, type.maxUses*Math.random()));
         this.power = Math.round(Math.max(type.maxPower/5, type.maxPower*Math.random()));
