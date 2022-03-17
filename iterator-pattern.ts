@@ -32,7 +32,7 @@ class WeaponInventoryInterable implements InventoryIterable {
     
     constructor() {
         while (this.items.length < this.MAX_ITEMS)
-            this.items.push(new WeaponItem);
+            this.items.push(new WeaponItem());
     }
     
     getIterator = function() {
