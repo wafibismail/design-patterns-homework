@@ -57,6 +57,6 @@ class WeaponInventoryIterator implements InventoryIterator {
     }
 
     isDone() {return this.index == this.inventory.items.length};
-    next() {this.index++};
+    next() {if(!isDone()) this.index++};
     current() {return this.inventory[this.index]};
 }
