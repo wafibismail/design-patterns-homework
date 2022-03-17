@@ -15,7 +15,7 @@ class WeaponItem implements Item {
         let type = WeaponItemTypes[Math.round(2*Math.random())];
 
         this.uses = Math.round(Math.max(type.maxUses/5, type.maxUses*Math.random()));
-        this.power = Math.round(type.maxPower*Math.random());
+        this.power = Math.round(Math.max(type.maxPower/5, type.maxPower*Math.random()));
         this.label = `${type.label} Lvl ${this.power}`;
     }
 }
