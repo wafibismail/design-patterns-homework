@@ -10,6 +10,7 @@ class WeaponItem implements Item {
     uses: number;
     power: number;
     label: string;
+    
     constructor() {
         let type = WeaponItemTypes[Math.round(2*Math.random())];
 
@@ -28,10 +29,12 @@ interface InventoryIterable {
 class WeaponInventoryInterable implements InventoryIterable {
     MAX_ITEMS = 5;
     items: WeaponItem[];
+    
     constructor() {
         while (this.items.length < this.MAX_ITEMS)
             this.items.push(new WeaponItem);
     }
+    
     getIterator = function() {
         return new WeaponInventoryIterator(this);
     };
